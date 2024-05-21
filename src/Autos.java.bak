@@ -1,0 +1,52 @@
+public class Autos {
+    //Attribute für Autos
+    String Markenname;
+    String Modell;
+    int Baujahr;
+    int Kilometerstand;
+    String Farbe;
+    int Preis;
+    private static String ganzename;
+    private static String adresse;
+    private static int geburtsdatum;
+    private static final int MaxKilometerstand = 100000;
+
+
+    public Autos(String Marke, String Modell, int Baujahr, int Kilometerstand, String Farbe, int Preis) {
+        //Konstruktor
+        this.Markenname = Marke;
+        this.Modell = Modell;
+        this.Baujahr = Baujahr;
+        this.Kilometerstand = Kilometerstand;
+        this.Farbe = Farbe;
+        this.Preis = Preis;
+
+    }
+    // Getter für Kundeninformationen
+    public static String getKunde() {
+        return "Name: " + ganzename + ", Adresse: " + adresse + ", Geburtsjahr: " + geburtsdatum;
+    }
+
+    // Setter für Kundeninformationen
+    public void setKunde(String newName, String newAdresse, int newGeburtsjahr) {
+        ganzename = newName;
+        adresse = newAdresse;
+        geburtsdatum = newGeburtsjahr;
+    }
+
+    public void Kunde() {
+        //Methode
+
+    }
+
+    public void Buchhaltung() {
+        // Methode für Buchhaltung
+        if (Kilometerstand < MaxKilometerstand) {
+            System.out.println("Marke:" + Markenname + " Modell:" + Modell + " Baujahr:" + Baujahr + " Kilometerstand:" + Kilometerstand + " Farbe:" + Farbe + " Preis:" + Preis);
+        }
+    }
+
+
+
+
+}
